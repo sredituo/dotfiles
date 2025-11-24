@@ -11,11 +11,11 @@ alias k='kubectl'
 
 # Prompt
 left-prompt(){
-    local current_dir="%K{238}%F{45} 📂 %~ %k%f"
+    local current_path="%K{238}%F{45} 📂 %~ %k%f"
     local time="%K{238}%F{38}| %*%k%f"
     local right_edge="%F{238}\uE0B0%f"
     local cmd_arrow="%F{47}❯%f"
-    echo -e "\n${current_dir}${time}${right_edge}\n${cmd_arrow} "
+    echo -e "\n${current_path}${time}${right_edge}\n${cmd_arrow} "
 }
 
 PROMPT=`left-prompt`
